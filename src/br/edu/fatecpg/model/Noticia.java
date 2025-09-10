@@ -2,9 +2,11 @@ package br.edu.fatecpg.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+import br.edu.fatecpg.model.Source;
+
 public class Noticia {
-    @SerializedName("name")
-    String source;
+    Source source;
     String author;
     String title;
     String description;
@@ -13,7 +15,7 @@ public class Noticia {
     String publishedAt;
     String content;
 
-    public Noticia(String source, String author, String title, String description, String url, String urlToImage, String publishedAt, String content) {
+    public Noticia(Source source, String author, String title, String description, String url, String urlToImage, String publishedAt, String content) {
         this.source = source;
         this.author = author;
         this.title = title;
@@ -24,11 +26,11 @@ public class Noticia {
         this.content = content;
     }
 
-    public String getSource() {
+    public Source getSource() {
         return source;
     }
 
-    public void setSource(String source) {
+    public void setSource(Source source) {
         this.source = source;
     }
 
@@ -91,7 +93,7 @@ public class Noticia {
     @Override
     public String toString() {
         return "Noticia{" +
-                "source='" + source + '\'' +
+                "source='" + source.getName() + '\'' +
                 ", author='" + author + '\'' +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +

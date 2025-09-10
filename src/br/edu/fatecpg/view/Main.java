@@ -8,12 +8,11 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
         NewsService n = new NewsService();
-        NoticiaController nc = new NoticiaController();
 
-        String test = n.getNews("bitcoin", 1);
-        System.out.println(test);
-        // nc.deserialize(test);
-        // System.out.println(nc.getNoticias().get(0).toString());
+        String test = n.getNews("bitcoin", 3);
+        //System.out.println(test);
+        n.deserialize(test);
+        n.getNoticias().forEach(noticia -> System.out.println(noticia.toString()));
 
     }
 }
