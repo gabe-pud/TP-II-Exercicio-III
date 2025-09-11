@@ -92,15 +92,13 @@ public class Noticia {
 
     @Override
     public String toString() {
-        return "Noticia{" +
-                "source='" + source.getName() + '\'' +
-                ", author='" + author + '\'' +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", url='" + url + '\'' +
-                ", urlToImage='" + urlToImage + '\'' +
-                ", publishedAt='" + publishedAt + '\'' +
-                ", content='" + content + '\'' +
-                '}';
+        return "source: " + source.getName() +
+                "\nauthor: " + author +
+                "\ntitle: " + title +
+                "\ndescription: " + description +
+                "\nurl: " + url +
+                "\nurlToImage: " + urlToImage +
+                "\npublishedAt: " + publishedAt +
+                "\ncontent: " + content;
     }
 }

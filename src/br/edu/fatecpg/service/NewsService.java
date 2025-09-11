@@ -14,7 +14,7 @@ import java.util.List;
 public class NewsService {
     NoticiaController noticias;
 
-    public String getNews(String search, int qtd) throws InterruptedException, IOException {
+    public String searchNews(String search, int qtd) throws InterruptedException, IOException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create("https://newsapi.org/v2/everything?q="+search+"&pageSize="+qtd+"&apiKey="+System.getenv("API_KEY"))).build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
@@ -23,8 +23,7 @@ public class NewsService {
 
     public void deserialize(String response){
         Gson gson = new Gson();
-        NoticiaController n = gson.fromJson(response, NoticiaController.class);
-        noticias = n;
+        noticias = gson.fromJson(response, NoticiaController.class);
     }
 
     public List<Noticia> getNoticias() {

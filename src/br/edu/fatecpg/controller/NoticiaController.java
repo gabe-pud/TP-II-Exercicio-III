@@ -1,7 +1,6 @@
 package br.edu.fatecpg.controller;
 
 import br.edu.fatecpg.model.Noticia;
-import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -12,6 +11,22 @@ public class NoticiaController {
     String totalResults;
     @SerializedName("articles")
     List<Noticia> noticias = new ArrayList<>();
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getTotalResults() {
+        return totalResults;
+    }
+
+    public void setTotalResults(String totalResults) {
+        this.totalResults = totalResults;
+    }
 
     public List<Noticia> getNoticias() {
         return noticias;
