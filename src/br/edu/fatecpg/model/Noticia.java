@@ -1,10 +1,5 @@
 package br.edu.fatecpg.model;
 
-import com.google.gson.annotations.SerializedName;
-
-import java.util.List;
-import br.edu.fatecpg.model.Source;
-
 public class Noticia {
     Source source;
     String author;

@@ -1,6 +1,5 @@
 package br.edu.fatecpg.view;
 
-import br.edu.fatecpg.controller.NoticiaController;
 import br.edu.fatecpg.service.NewsService;
 
 import java.io.IOException;
@@ -14,7 +13,7 @@ public class Main {
         boolean run = true;
 
         while (run) {
-            System.out.println("O que seseja pesquisar?");
+            System.out.println("O que deseja pesquisar?");
             String pesquisa = sc.next();
             System.out.println("quantas noticias sobre o topico vecê deseja? (max: 100)");
             int qtd = sc.nextInt();
